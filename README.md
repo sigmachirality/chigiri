@@ -1,4 +1,4 @@
-# Chigiri
+# Chigiri 🎗️
 Chigiri is a [React](https://reactjs.com) [Context](https://reactjs.org/docs/context.html) library for calling React Components as data fetchers from `async` code. It accomplishes this by wrapping components in [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## But Why?
