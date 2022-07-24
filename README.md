@@ -1,10 +1,10 @@
 # Chigiri
-Chigiri is a [React](https://reactjs.com) [Context](https://reactjs.org/docs/context.html) library for wrapping components in [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Chigiri is a [React](https://reactjs.com) [Context](https://reactjs.org/docs/context.html) library for calling React Components as data fetchers from `async` code. It accomplishes this by wrapping components in [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## But Why?
-Though Promises aren't [Monads](https://wiki.haskell.org/Monad), they're pretty close. Additionally, one can think of a modal/prompt/form component as a Promise which resolves with the form contents of that component. This is nice when implementing some UI/UX flows (like [Two Factor Authentication](https://www.twilio.com/docs/glossary/what-is-two-factor-authentication-2fa)) where blocking until the data is returned, as opposed to hooking into or writing an `onSubmit`-like function, allows you to maintain variables in execution context. Following this approach, one can trigger components from `async` code!
+You can model a modal/general component as a Promise which resolves with the form contents of that component. This is nice when implementing UI/UX flows like [Two Factor Authentication](https://www.twilio.com/docs/glossary/what-is-two-factor-authentication-2fa), where blocking until the data is returned, as opposed to hooking into or writing an `onSubmit`-like function, allows you to maintain variables in execution context. Following this approach, one can trigger components as data fetchers from `async` code!
 
-Additionally, compared to existing packages like [react-promise-modal](), Chigiri plays nicely with frameworks like [NextJS](https://nextjs.org/) which rely heavily on [Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering). This is because existing packages register components at runtime, whereas Chigiri requires you to register all possible modal components at build time using a `ComponentTypes`-like object.
+Compared to existing packages, Chigiri plays nicely with frameworks like [NextJS](https://nextjs.org/) which rely heavily on [Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering). This is because existing packages register components at runtime, whereas Chigiri requires you to register all possible modal components at build time using a `ComponentTypes`-like object.
 
 ## Limitations
 -  `triggerPromise` lacks inferred typing. You can type `triggerPromise` by passing a [Type Variable](https://www.typescriptlang.org/docs/handbook/2/generics.html)
@@ -35,7 +35,7 @@ function Child() {
     setState(stateFromModal);
   }
   return (
-    <Modal
+    <ExampleModal
       isOpen={isOpen}
       onSubmit={resolve}
       onClose={reject}
@@ -67,7 +67,7 @@ function Child() {
   const { triggerModal } = useModal();
   const [state, setState] = useState<StateType>();
   const onClick = async () => {
-    const stateFromModal = await triggerModal<StateType>(modalProps);
+    const stateFromModal = await triggerModal<StateType>('ExampleModal', modalProps);
     setState(stateFromModal);
   }
   return (
