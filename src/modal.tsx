@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, Fragment, Provider } from 'react';
+import { createContext, useContext, useState, Fragment } from 'react';
 import type { Component, ComponentProps, Context, FC } from 'react';
 import { throwError, ProviderProps } from './common';
 
@@ -32,8 +32,8 @@ const _createModalProvider =
   <T extends ComponentTypes>(ModalContext: ModalContext<T>, components: T) =>
   ({ children }: ProviderProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [resolve, setResolve] = useState<(result?: unknown) => void>(throwError);
-    const [reject, setReject] = useState<(error?: unknown) => void>(throwError);
+    const [resolve, setResolve] = useState<(result?: unknown) => void>(() => throwError);
+    const [reject, setReject] = useState<(error?: unknown) => void>(() => throwError);
     const [component, setComponent] = useState<ComponentTypesUnion>();
     const [props, setProps] = useState<ComponentPropTypes<T>>();
     const triggerPromise = <R=unknown>(component: ComponentTypesUnion, props?: ComponentPropTypes<T>) => {

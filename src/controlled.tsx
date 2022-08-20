@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { throwError, ProviderProps } from './common';
 
 interface PromiseContextState {
@@ -16,8 +16,8 @@ const PromiseContext = createContext<PromiseContextState>({
 
 export const PromiseProvider = ({ children }: ProviderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [resolve, setResolve] = useState<(result?: unknown) => void>(throwError);
-  const [reject, setReject] = useState<(error?: unknown) => void>(throwError);
+  const [resolve, setResolve] = useState<(result?: unknown) => void>(() => throwError);
+  const [reject, setReject] = useState<(error?: unknown) => void>(() => throwError);
   const triggerPromise = <R=unknown>() => {
     setIsOpen(true);
     return new Promise<R>((resolve, reject) => {
