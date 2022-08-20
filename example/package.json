@@ -1,0 +1,27 @@
+{
+  "name": "chigiri-example",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.8",
+    "@chakra-ui/react": "^2.2.8",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "chigiri": "https://github.com/sigmachirality/chigiri",
+    "framer-motion": "^7.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-modal": "^3.13.1",
+    "parcel": "latest",
+    "process": "^0.11.10"
+  }
+}
