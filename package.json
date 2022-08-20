@@ -5,20 +5,21 @@
   "author": "sigmachirality",
   "license": "MIT",
   "private": true,
+  "source": "src/index.tsx",
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
-    "lint": "prettier src/*.{ts,tsx}  --write --ignore-unknown && eslint"
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./lib/main.js",
+  "module": "./lib/module.js",
+  "types": "./lib/types.d.ts",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "2.7.0",
+    "@parcel/transformer-typescript-types": "2.7.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
@@ -27,6 +28,7 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "parcel": "^2.7.0",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
