@@ -220,7 +220,7 @@
     compute-scroll-into-view "1.0.14"
     copy-to-clipboard "3.3.1"
 
-"@chakra-ui/icon@3.0.8", "@chakra-ui/icon@^3.0.8":
+"@chakra-ui/icon@3.0.8":
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.8.tgz#728476d657f1fc80c2ee0f39859703a0f3314b68"
   integrity sha512-avd6mthBoG9R8cLLAROi/FItgk7wHy1YpeAXOrGdK/U/ECVWZev64RmI1UduKuVOLlSZldXWzFJmLdw6dAMG7A==
@@ -569,7 +569,7 @@
     "@chakra-ui/checkbox" "2.1.7"
     "@chakra-ui/utils" "2.0.8"
 
-"@chakra-ui/system@2.2.6", "@chakra-ui/system@^2.2.6":
+"@chakra-ui/system@2.2.6":
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/@chakra-ui/system/-/system-2.2.6.tgz#09824efd43d7568a5a34e40908bf2ad0e0f8d27f"
   integrity sha512-I5q38ObqCrGXmLsxkc56F+1RONbpIIFJvOgq1upXMPOJWHqkzmdqaoJtpANhoE2LvB0GH/gRniiWN17WBCsOIQ==
@@ -1764,7 +1764,7 @@ chalk@^4.1.0:
 
 "chigiri@https://github.com/sigmachirality/chigiri":
   version "0.0.1"
-  resolved "https://github.com/sigmachirality/chigiri#90a036f7c29d93e09940175e495e15fc6ecf09fc"
+  resolved "https://github.com/sigmachirality/chigiri#6eb209ff67b93c08abdff3873cb5d7705d60cc48"
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"

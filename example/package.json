@@ -4,7 +4,7 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build",
-    "deploy": "parcel build --public-url '/chigiri' && mv ./dist ../ && mv ../dist ../docs"
+    "deploy": "parcel build --public-url '/chigiri' && rm -rf ../docs && mv ./dist ../docs"
   },
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
