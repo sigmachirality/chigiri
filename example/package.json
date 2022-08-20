@@ -3,7 +3,8 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build"
+    "build": "parcel build",
+    "deploy": "parcel build --public-url '/chigiri' && mv ./dist ../ && mv ../dist ../docs"
   },
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
