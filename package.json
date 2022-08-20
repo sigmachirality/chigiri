@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A react context and provider for wrapping components in promises.",
   "author": "sigmachirality",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "source": "src/index.tsx",
   "scripts": {
