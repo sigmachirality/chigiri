@@ -10,9 +10,12 @@ Compared to existing packages, Chigiri plays nicely with frameworks like [NextJS
 -  `triggerPromise` lacks inferred typing. You can type `triggerPromise` by passing a [Type Variable](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 -  `ModalProvider` can only open 1 modal at a time. Not sure if allowing more than 1 modal open at a time would be an anti-pattern.
 
-# Quick Start
+## Documentation
+I wrote a simple example app using [Chakra UI](https://chakra-ui.com) which you can clone, build and run at `/example` in this repo or view [here](https://danxtao.com/chigiri). The app provides a few interactive examples of how to use Chigiri, as well as links to their implementation in the `/example` app.
 
-## Base provider example
+## Quick Start
+
+### Base provider example
 Use this provider if you want fine control of the modal component (where it's rendered in the DOM, props, etc). 
 
 ```typescript
@@ -46,7 +49,7 @@ function Child() {
 }
 ```
 
-## Modal provider example
+### Modal provider example
 ```typescript
 import registerModals from 'chigiri';
 import ExampleModal from './ExampleModal';
