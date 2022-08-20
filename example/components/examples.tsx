@@ -30,7 +30,7 @@ export const Example = () => {
     <Box>
       <Heading>usePromiseWrapper Example</Heading>
       <Heading size='md'>
-        (<Link href='/' isExternal>
+        (<Link href='https://github.com/sigmachirality/chigiri/blob/a36cf7899e989e0608a05a64881b708cf2775d24/example/components/examples.tsx#L31' isExternal>
           Source Code <ExternalLinkIcon mx='2px' />
         </Link>)
       </Heading>
@@ -41,7 +41,7 @@ export const Example = () => {
     <Box>
       <Heading>repeating usePromiseWrapper calls example</Heading>
       <Heading size='md'>
-        (<Link href='/' isExternal>
+        (<Link href='https://github.com/sigmachirality/chigiri/blob/a36cf7899e989e0608a05a64881b708cf2775d24/example/components/examples.tsx#L42' isExternal>
           Source Code <ExternalLinkIcon mx='2px' />
         </Link>)
       </Heading>
